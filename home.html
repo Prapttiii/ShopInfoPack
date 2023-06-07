@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+    <title>
+       shop info pack 
+    </title>
+    <style>
+        /* Navigation */
+        *{
+            background-color: #f8f8f8;
+        }
+
+#navbar {
+    flex-direction: column;
+}
+
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+}
+/* Home section */
+#home{
+    height: 370px; 
+    padding: 3px 28px;
+}
+
+#home::before{
+    height: 480px; 
+}
+
+#home p{
+    font-size: 13px;
+}
+
+
+/* Services section  */
+#services{
+    flex-direction: column;
+}
+
+#services .box { 
+    padding: 14px;
+    margin: 2px 0px; 
+    margin-bottom: 20px;
+    
+    
+}
+
+/* Clients section */
+#clients{
+    flex-wrap: wrap;
+}
+
+#clients img{
+    width: 66px;
+    padding: 6px;
+    height: auto;
+}
+
+/* Contact us section */
+#contact-box form{
+    width:80%;
+}
+/* Footer */
+
+/* Utility classes */
+.h-primary{
+    font-size:26px ;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 5px solid rgb(255, 25, 25);
+    padding: 15px;
+    margin: 2px 30px;
+    border-radius: 28px;
+    background: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+    
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('../bg.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 250%;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+  
+}
+
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+    color: black;
+    font-size: 150%;
+}
+.q{
+    text-align: center;
+}
+.b1{
+    font-size: 20px;
+    padding: 4px 8px;
+    color: rgb(255, 252, 251);
+    background-color: rgb(255, 25, 25); 
+    border: 4px black;
+    border-radius: 3px;
+} 
+.b2{
+    font-size: 20px;
+    padding: 4px 8px;
+    color: rgb(255, 252, 251);
+    background-color: rgb(255, 25, 25); 
+    border: 4px black;
+    border-radius: 3px;
+} 
+    
+.b3{
+    font-size: 20px;
+    padding: 4px 8px;
+    color: rgb(255, 252, 251);
+    background-color: rgb(255, 25, 25); 
+    border: 4px black;
+    border-radius: 3px;
+} 
+.b4{
+    font-size: 20px;
+    padding: 4px 8px;
+    color: rgb(255, 252, 251);
+    background-color: rgb(255, 25, 25); 
+    border: 4px black;
+    border-radius: 3px;
+} 
+.b5{
+    font-size: 20px;
+    padding: 4px 8px;
+    color: rgb(255, 252, 251);
+    background-color: rgb(255, 25, 25); 
+    border: 4px black;
+    border-radius: 3px;
+} 
+.b6{
+    font-size: 20px;
+    padding: 4px 8px;
+    color: rgb(255, 252, 251);
+    background-color: rgb(255, 25, 25); 
+    border: 4px black;
+    border-radius: 3px;
+} 
+.b7{
+    font-size: 20px;
+    padding: 4px 8px;
+    color: rgb(255, 252, 251);
+    background-color: rgb(255, 25, 25); 
+    border: 4px black;
+    border-radius: 3px;
+} 
+.b8{
+    font-size: 20px;
+    padding: 4px 8px;
+    color: rgb(255, 252, 251);
+    background-color: rgb(255, 25, 25); 
+    border: 4px black;
+    border-radius: 3px;
+} 
+    </style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP INFO PACK</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GET ALL THE INFORMATION ABOUT CHANGA  shopinfopack.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid" >
+            <div id="logo">
+                <img src="logo.jpg" alt="ShopInfoPack.com" >
+            </div>
+          <a class="navbar-brand"  href="#home">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#services-container">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <section id="home" >
+        <h1 class="h-primary" >Welcome to ShopInfoPack</h1>
+        <p >Now get all the information about all the shops in changa easily. </p>
+        <p >Now it is easy to contact the owner of the shop </p>
+        
+        <button type="button" class="btn btn-danger">GET INFORMATION</button>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <container >
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="margin-left: 5%; margin-right:3%; ;">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img   src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhhaXIlMjBzYWxvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" height="600px" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" >
+              <h2 style="color: black;" >Hair salons</h2>
+             
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"  height="600px"class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 style="color: black;">Restaurants</h2>
+             
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1619810230359-b2c2f61c49cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9zdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" height="600px"class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 style="color: black;">Hostels</h2>
+              
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </container>
+    <div class="row" style="justify-content: center; margin-top: 6%;">
+
+        <div class="card" style="width: 18rem;" id="services-container">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Restaurants</h5>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#hns" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Hot and Spicy
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="hns">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample1" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Patel mug pulav
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="collapseWidthExample1">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Hide-out cafe
+                </button>
+              </p>
+              <div >
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Hostels</h5>
+              
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#shrd" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Shreedeep Hostel
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="shrd">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExamplenis" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Nisarg Hostel
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="collapseWidthExamplenis">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExampleom" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Om Hostel
+                </button>
+              </p>
+              <div >
+                <div class="collapse collapse-horizontal" id="collapseWidthExampleom">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2Fsb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Hair salons</h5>
+              
+              
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#raj" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Raj hair salon
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="raj">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#jk" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Jk hair salon
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="jk">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExampleomh" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Om hair salon
+                </button>
+              </p>
+              <div >
+                <div class="collapse collapse-horizontal" id="collapseWidthExampleomh">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGF1bmRyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Laundry</h5>
+              
+              
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#shrdl" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Shyam Laundry
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="shrdl">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#ncollapseWidthExamplenis" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Nisarg laundry
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="ncollapseWidthExamplenis">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExampleom" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Raju Laundry
+                </button>
+              </p>
+              <div >
+                <div class="collapse collapse-horizontal" id="collapseWidthExampleom">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGhhcm1hY3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Medical Stores</h5>
+              
+              
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#shrdp" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Sai pharmacy
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="shrdp">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#phcollapseWidthExamplenis" aria-expanded="false" aria-controls="collapseWidthExample">
+                  Shiv pharmacy
+                </button>
+              </p>
+              <div>
+                <div class="collapse collapse-horizontal" id="phcollapseWidthExamplenis">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#shreecollapseWidthExampleom" aria-expanded="false" aria-controls="collapseWidthExample">
+                  shreeji pharmacy
+                </button>
+              </p>
+              <div >
+                <div class="collapse collapse-horizontal" id="shreecollapseWidthExampleom">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Details
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                          <li class="list-group-item">Contact: 8758375873</li>
+                          <li class="list-group-item">Rating: 4/5</li>
+                          <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1556122071-e404eaedb77f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGF4aXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Taxi Services</h5>
+              
+                <p>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#shrd" aria-expanded="false" aria-controls="collapseWidthExample">
+                    Bharat taxi
+                  </button>
+                </p>
+                <div>
+                  <div class="collapse collapse-horizontal" id="shrd">
+                      <div class="card" style="width: 18rem;">
+                          <div class="card-header">
+                            Details
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                            <li class="list-group-item">Contact: 8758375873</li>
+                            <li class="list-group-item">Rating: 4/5</li>
+                            <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+                <p>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExamplenis" aria-expanded="false" aria-controls="collapseWidthExample">
+                    Changa taxi
+                  </button>
+                </p>
+                <div>
+                  <div class="collapse collapse-horizontal" id="collapseWidthExamplenis">
+                      <div class="card" style="width: 18rem;">
+                          <div class="card-header">
+                            Details
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                            <li class="list-group-item">Contact: 8758375873</li>
+                            <li class="list-group-item">Rating: 4/5</li>
+                            <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+                <p>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExampleom" aria-expanded="false" aria-controls="collapseWidthExample">
+                    Kalu Taxi
+                  </button>
+                </p>
+                <div >
+                  <div class="collapse collapse-horizontal" id="collapseWidthExampleom">
+                      <div class="card" style="width: 18rem;">
+                          <div class="card-header">
+                            Details
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Timing: 10:00 AM to 9:00PM</li>
+                            <li class="list-group-item">Contact: 8758375873</li>
+                            <li class="list-group-item">Rating: 4/5</li>
+                            <li class="list-group-item"><address>efewgfuefy yfygef</address></li>
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+            </div>
+            
+          </div>
+    </div>
+
+    <section id="contact" style="margin-top: 9%;">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="connect.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <p>&nbsp;</p>
+                <p>
+                  <input type="submit" name="Submit" id="Submit" value="Submit">
+                  </p>
+                
+            </form>
+        </div>
+       
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; shopinfopack.com. All rights reserved!
+        </div> 
+
+    </footer>
+</body>
+</html>
